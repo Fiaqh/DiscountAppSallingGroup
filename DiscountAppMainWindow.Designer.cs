@@ -1,6 +1,6 @@
 ﻿namespace DiscountAppSallingGroup
 {
-    partial class Form1
+    partial class DiscountAppMainWindow
     {
         /// <summary>
         ///  Required designer variable.

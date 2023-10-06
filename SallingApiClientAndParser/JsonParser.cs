@@ -13,7 +13,7 @@ namespace SallingApiClientAndParser
 
         public List<DiscountProducts> ParseJsonText()
         {
-            //Parses the Json text to a List of discount products. Json file format can be found at 
+            //Parses the Json text to a List of DiscountProducts. Json file format can be found at 
             //https://prod-oas-website.azurewebsites.net/#/Food%20Waste/getFoodWasteByStoreId
             List<DiscountProducts> res = JsonConvert.DeserializeObject<List<DiscountProducts>>(jsonText);
             return res;

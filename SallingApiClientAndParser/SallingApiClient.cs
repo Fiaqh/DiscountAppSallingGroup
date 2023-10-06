@@ -1,25 +1,21 @@
-using System;
-using System.Net.Http;
-using System.Threading.Tasks;
-
 namespace SallingApiClientAndParser
 {
     public class SallingApiClient
     {
         private readonly HttpClient httpClient;
-        public string apiUrl = "https://api.sallinggroup.com/v1/food-waste/?zip=";
-        public string accessToken = "c1a9dcbb-ef9e-4e4c-acf9-07631d147dd8";
+
+        //apiUrl and accesToken for Salling group API. This should technically be hidden in some file...
+        private string apiUrl = "https://api.sallinggroup.com/v1/food-waste/?zip=";
+        private string accessToken = "c1a9dcbb-ef9e-4e4c-acf9-07631d147dd8";
+
         public string zipCode;
 
-        public SallingApiClient(string zipCode)
+        public SallingApiClient()
         {
             httpClient = new HttpClient();
-            this.zipCode = zipCode;
-
         }
 
-
-        public async Task<string> GetApiResponseAsync()
+        public async Task<string> GetApiResponseAsync(string zipCode)
         {
             try
             {
